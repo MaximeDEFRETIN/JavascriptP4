@@ -7,7 +7,9 @@ var tailleString = function (texte) {
     return texte.length;
 }
 var remplaceECar = function (texte) {
-    return;
+var text = texte.charAt(1);;
+var t = text.value = " ";
+      return t;
 }
 var concatString = function (texte1, texte2) {
     return texte1 + texte2;
@@ -25,8 +27,7 @@ var minusculeString = function (texte) {
     return texte.toLowerCase();
 }
 var SupprEspaceString = function (texte) {
-    var espace = '' + texte + '';
-    return espace;
+    return;
 }
 var IsString = function (texte) {
     return 'A completer';
@@ -57,7 +58,8 @@ var sufaceCercle = function (rayon) {
     return 'A completer';
 }
 var hypothenuse = function (ab, ac) {
-    return 'A completer';
+
+    return;
 }
 var calculIMC = function (poids, taille) {
     return 'A completer';
