@@ -6,19 +6,21 @@
 var tailleString = function (texte) {
     return texte.length;
 }
+//replace("","") remplace une valeur par une autre
 var remplaceECar = function (texte) {
-var text = texte.charAt(1);;
-var t = text.value = " ";
-      return t;
+      return texte.replace("e"," ");
 }
+//texte1.concat(texte2) -> concatène 2 variables
 var concatString = function (texte1, texte2) {
-    return texte1 + texte2;
+    return texte1.concat(texte2);
 }
+//charAt() -> retourne le caractère
 var afficherCar5 = function (texte) {
-    return 'A completer';
+    return texte.charAt(4);
 }
+//texte.substr(0,9) -> retourne les caractères de l'indice 0 à 9
 var afficher9Car = function (texte) {
-    return 'A completer';
+    return texte.substr(0,9);
 }
 var majusculeString = function (texte) {
     return texte.toUpperCase();
@@ -26,41 +28,55 @@ var majusculeString = function (texte) {
 var minusculeString = function (texte) {
     return texte.toLowerCase();
 }
+//trim() supprime les espaces avant et après la variable
 var SupprEspaceString = function (texte) {
-    return;
+    return texte.trim();
 }
+//isNaN() détermine si la variable passée en paramètre est nombre ou pas
 var IsString = function (texte) {
-    return 'A completer';
+  var text = isNaN(texte);
+    return text;
 }
 var AfficherExtensionString = function (texte) {
-    return 'A completer';
+    return;
 }
 var NombreEspaceString = function (texte) {
-    return 'A completer';
+    return;
 }
 var InverseString = function (texte) {
-    return 'A completer';
+var text = texte.reverse()
+    return text;
 }
 
 /**
  * Exercices sur les nombres et les caluls mathématiques
  */
 var calculPuissance = function (x, y) {
-    return 'A completer';
+    return Math.pow(x, y);
 }
+//Math.abs() retourne l'entier positif
 var valeurAbsolue = function (nombre) {
-    return 'A completer';
+    return Math.abs(nombre);
 }
 var valeurAbsolueArray = function (array) {
-    return 'A completer';
+var array = array.slice(0);
+var absolue = Math.abs(array);
+return alert(absolue);
 }
+//Math.round retourne l'arrondi d'un nombre
 var sufaceCercle = function (rayon) {
-    return 'A completer';
+    var cercle = Math.pow(rayon, 2) * Math.PI;
+var result = Math.round(cercle);
+    return result;
 }
 var hypothenuse = function (ab, ac) {
+var ab = Math.pow(ab, 2);
+var ac = Math.pow(ac, 2);
 
-    return;
+var result = Math.sqrt(ac + ab);
+    return result;
 }
 var calculIMC = function (poids, taille) {
-    return 'A completer';
+/*var result = poids / Math.pow(taille, 2);
+    return parseInt(poids, 2)*/;
 }
