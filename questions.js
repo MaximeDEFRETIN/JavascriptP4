@@ -34,18 +34,22 @@ var SupprEspaceString = function (texte) {
 }
 //isNaN() détermine si la variable passée en paramètre est nombre ou pas
 var IsString = function (texte) {
-  var text = isNaN(texte);
-    return text;
+    return isNaN(texte);
 }
+//texte.substr(indice pour le démarrage, longueur) -> renvoie une partie de la chaine de caractère ciblée
+//texte.lastIndexOf() -> renvoie l'indice de la dernière occurence trouvé
 var AfficherExtensionString = function (texte) {
-    return;
+    //on donne, substring() lindice équivalent à la dernière occurence "." auquel on a ajouté la valeur 1
+    return texte.substring(texte.lastIndexOf('.')+1);
 }
+//texte.split(séparateur) -> permet de séparer une chaine en plusieurs éléments
 var NombreEspaceString = function (texte) {
-    return;
+    return texte.split(' ').length - 1;
 }
+//.reverse() -> permet de renverser l'ordre des éléments
+//.join(séparateur) -> reunit dse éléments en une chaine de caractère, le séparateu indique ce qui sépare les éléments de la chaine
 var InverseString = function (texte) {
-var text = texte.reverse()
-    return text;
+   return texte.split('').reverse().join('');
 }
 
 /**
@@ -59,24 +63,26 @@ var valeurAbsolue = function (nombre) {
     return Math.abs(nombre);
 }
 var valeurAbsolueArray = function (array) {
-var array = array.slice(0);
-var absolue = Math.abs(array);
-return alert(absolue);
+return array.map(Math.abs);
 }
 //Math.round retourne l'arrondi d'un nombre
 var sufaceCercle = function (rayon) {
     var cercle = Math.pow(rayon, 2) * Math.PI;
-var result = Math.round(cercle);
-    return result;
+    return Math.round(cercle);
 }
+//Math.pow(x, y) -> x puissance y
+//Math.sqrt(ab + ac) -> permet de calculer la racine carré d'une valeur
 var hypothenuse = function (ab, ac) {
 var ab = Math.pow(ab, 2);
 var ac = Math.pow(ac, 2);
 
-var result = Math.sqrt(ac + ab);
-    return result;
+    return Math.sqrt(ac + ab);
 }
+//cal.toFixed() -> permet de déterminer le nombre de chifrre après la virgule
+//parseFloat() -> permet de transformer une chaine de caractère en nombre flottant
 var calculIMC = function (poids, taille) {
-/*var result = poids / Math.pow(taille, 2);
-    return parseInt(poids, 2)*/;
+var cal = poids / (taille * taille);
+var cal = cal.toFixed(2);
+//Après avoir fait le calcule, en indiquant le nombre de chiffre après la virgule, on transforme le resultat (sous forme de chaine de caractère) en nombre
+    return parseFloat(cal);
 }
