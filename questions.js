@@ -63,7 +63,7 @@ var NombreEspaceString = function (texte) {
 //.reverse() -> permet de renverser l'ordre des éléments
 //.join(séparateur) -> reunit des éléments en une chaine de caractère, le séparateur indique ce qui sépare les éléments de la chaine
 var InverseString = function (texte) {
-  //split('') -> chause élément devient un chaine de caractère
+  //split('') -> chaque élément devient un chaine de caractère
   return texte.split('').reverse().join('');
 }
 
@@ -90,7 +90,7 @@ var sufaceCercle = function (rayon) {
 var hypothenuse = function (ab, ac) {
   var ab = Math.pow(ab, 2);
   var ac = Math.pow(ac, 2);
-  
+
   return Math.sqrt(ac + ab);
 }/*return Math.hypot(ab,ac);*/
 
